@@ -20,6 +20,10 @@ function setup() {
 
 function draw() {
   background(120, 190, 255); // sky
+  
+  fill('yellow')
+  circle(0,55,255);
+  
 
   // ground
   fill(60, 200, 90);
@@ -72,7 +76,7 @@ function applyPhysics() {
 // JUMP (Space or W)
 // ==================================================
 function keyPressed() {
-  if ((keyCode === 32 || keyCode === 87) && onGround) {
+  if ((key === 32 || key === 'w') && onGround) {
     vy = jumpForce;
     onGround = false;
   }
